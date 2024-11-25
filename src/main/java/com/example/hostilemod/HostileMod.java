@@ -5,6 +5,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
+import java.io.File;
+
 @Mod(modid = HostileMod.MODID, name = HostileMod.NAME, version = HostileMod.VERSION)
 public class HostileMod {
     public static final String MODID = "hostilemod";
@@ -13,12 +15,13 @@ public class HostileMod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        ConfigHandler.init(event.getSuggestedConfigurationFile());
+        File configFile = new File(event.getModConfigurationDirectory(), "hostilemod_relationships.json");
+        ConfigHandler.init(configFile);
         MinecraftForge.EVENT_BUS.register(new EntityAttackGoalHandler());
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        // Any additional setup can go here
+        // Additional initialization logic can go here
     }
 }
