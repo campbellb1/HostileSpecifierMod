@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "hostilemod",
+    "name": "Hostile Mod",
+    "description": "Adds custom hostile behaviors to specified entities.",
+    "version": "1.0",
+    "mcversion": "1.12.2",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["YourName"],
+    "credits": "Based on ideas from the Minecraft Forge community.",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
